@@ -1,0 +1,8 @@
+{
+  "appTitle": "Veterinary App",
+  "petOwners": "Pet Owners",
+  "addPetOwner": "Add Pet Owner",
+  "lastName": "Surname",
+  "deleteConfirmText": "Are you sure you would like to delete this pet owner?",
+  "enterLastName": "Please enter a surname"
+}
