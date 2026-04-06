@@ -17,7 +17,7 @@ class DatabaseHelper {
     return _database!;
   }
 
-  // Creates the database file on the device
+  // Creates the database file on the device 4
   Future<Database> _initDB(String filePath) async {
     // Get the path where the database will be saved on the device
     final dbPath = await getDatabasesPath();
