@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'pet_owner_page.dart';
+import 'PetPage.dart';
 
 /// This is the starting point of the app
 void main() {
@@ -87,7 +88,12 @@ class HomePage extends StatelessWidget {
                 height: 60,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Teammate 2 will add navigation here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PetPage(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
