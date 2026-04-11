@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'pet_owner_page.dart';
-
+import 'veterinarian_page.dart';
 /// This is the starting point of the app
 void main() {
   runApp(const MyApp());
@@ -124,6 +124,12 @@ class HomePage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Teammate 4 will add navigation here
+                    Navigator.push(        // ← ADD THIS
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VeterinarianPage(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.purple,
