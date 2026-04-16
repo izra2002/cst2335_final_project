@@ -3,14 +3,15 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'pet_owner_page.dart';
 import 'PetPage.dart';
 import 'Veterinarian_page.dart';
+import 'vaccine_page.dart';
 
-// This is the starting point of the app
+/// This is the starting point of the app
 void main() {
   runApp(const MyApp());
 }
 
-//This is the root widget of the app.
-// It sets up the language support for British and American English.
+/// This is the root widget of the app.
+/// It sets up the language support for British and American English.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -105,13 +106,18 @@ class HomePage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Button 3 - Aladin's Vaccine page (coming soon)
+              // Button 3 - Aladin's Vaccine page
               SizedBox(
                 width: double.infinity,
                 height: 60,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Aladin will add navigation here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VaccinePage(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
