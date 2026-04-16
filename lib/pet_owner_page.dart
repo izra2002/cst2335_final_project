@@ -3,10 +3,10 @@ import 'database_helper.dart';
 import 'add_pet_owner_page.dart';
 import 'pet_owner_detail_page.dart';
 
-/// This page is the main Pet Owner page.
-/// It shows a list of all pet owners stored in the database.
-/// On a phone it opens the detail page in a new screen.
-/// On a tablet it shows the list and detail side by side.
+// This page is the main Pet Owner page.
+// It shows a list of all pet owners stored in the database.
+// On a phone it opens the detail page in a new screen.
+// On a tablet it shows the list and detail side by side.
 class PetOwnerPage extends StatefulWidget {
   const PetOwnerPage({super.key});
 
@@ -16,10 +16,10 @@ class PetOwnerPage extends StatefulWidget {
 
 class _PetOwnerPageState extends State<PetOwnerPage> {
 
-  /// This list holds all the pet owners loaded from the database
+  // This list holds all the pet owners loaded from the database
   List<Map<String, dynamic>> _owners = [];
 
-  /// This holds the currently selected owner for the tablet layout
+  // This holds the currently selected owner for the tablet layout
   Map<String, dynamic>? _selectedOwner;
 
   @override
@@ -29,7 +29,7 @@ class _PetOwnerPageState extends State<PetOwnerPage> {
     _loadOwners();
   }
 
-  /// Gets all pet owners from the database and updates the list on screen
+  // Gets all pet owners from the database and updates the list on screen
   Future<void> _loadOwners() async {
     final owners = await DatabaseHelper.instance.getAllOwners();
     setState(() {
@@ -37,12 +37,12 @@ class _PetOwnerPageState extends State<PetOwnerPage> {
     });
   }
 
-  /// Checks if the screen is wide enough to be a tablet
+  // Checks if the screen is wide enough to be a tablet
   bool _isTablet(BuildContext context) {
     return MediaQuery.of(context).size.width > 600;
   }
 
-  /// Handles tapping an owner from the list
+  // Handles tapping an owner from the list
   Future<void> _onOwnerTapped(Map<String, dynamic> owner) async {
     if (_isTablet(context)) {
       // On tablet just update the selected owner on the right side
@@ -64,7 +64,7 @@ class _PetOwnerPageState extends State<PetOwnerPage> {
     }
   }
 
-  /// Builds the list of pet owners
+  // Builds the list of pet owners
   Widget _buildList() {
     return _owners.isEmpty
         ? const Center(

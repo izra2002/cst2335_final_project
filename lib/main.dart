@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'pet_owner_page.dart';
 
-/// This is the starting point of the app
+// This is the starting point of the app
 void main() {
   runApp(const MyApp());
 }
 
-/// This is the root widget of the app.
-/// It sets up the language support for British and American English.
+// This is the root widget of the app.
+// It sets up the language support for British and American English.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/// This is the main home page with 4 buttons for each team member
+// This is the main home page with 4 buttons for each team member
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

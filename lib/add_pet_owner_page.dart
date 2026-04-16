@@ -71,7 +71,7 @@ class _AddPetOwnerPageState extends State<AddPetOwnerPage> {
     }
   }
 
-  /// Fills the form fields with the previously saved customer data
+  // Fills the form fields with the previously saved customer data
   Future<void> _loadPreviousData() async {
     final firstName = await _prefs.getString('firstName');
     final lastName = await _prefs.getString('lastName');
@@ -89,7 +89,7 @@ class _AddPetOwnerPageState extends State<AddPetOwnerPage> {
     });
   }
 
-  /// Saves the current form data to EncryptedSharedPreferences
+  // Saves the current form data to EncryptedSharedPreferences
   Future<void> _saveToPrefs() async {
     await _prefs.setString('firstName', _firstNameController.text);
     await _prefs.setString('lastName', _lastNameController.text);
@@ -98,7 +98,7 @@ class _AddPetOwnerPageState extends State<AddPetOwnerPage> {
     await _prefs.setString('insuranceNumber', _insuranceController.text);
   }
 
-  /// Saves the new pet owner to the database
+  // Saves the new pet owner to the database
   Future<void> _saveOwner() async {
     // Check all required fields are filled
     if (_formKey.currentState!.validate()) {

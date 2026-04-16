@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'database_helper.dart';
 
-/// This page shows the full details of a selected pet owner.
-/// The user can update the owner's information or delete them
-/// from the database using the buttons at the bottom.
+// This page shows the full details of a selected pet owner.
+//The user can update the owner's information or delete them
+// from the database using the buttons at the bottom.
 class PetOwnerDetailPage extends StatefulWidget {
 
-  /// The pet owner data passed from the list page
+  //The pet owner data passed from the list page
   final Map<String, dynamic> owner;
 
   const PetOwnerDetailPage({super.key, required this.owner});
@@ -49,7 +49,7 @@ class _PetOwnerDetailPageState extends State<PetOwnerDetailPage> {
     super.dispose();
   }
 
-  /// Updates the pet owner's information in the database
+  // Updates the pet owner's information in the database
   Future<void> _updateOwner() async {
     if (_formKey.currentState!.validate()) {
 
@@ -80,7 +80,7 @@ class _PetOwnerDetailPageState extends State<PetOwnerDetailPage> {
     }
   }
 
-  /// Deletes the pet owner from the database
+  // Deletes the pet owner from the database
   Future<void> _deleteOwner() async {
     // Show confirmation dialog before deleting
     showDialog(
