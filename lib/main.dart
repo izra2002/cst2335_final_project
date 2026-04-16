@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'pet_owner_page.dart';
 import 'PetPage.dart';
+import 'Veterinarian_page.dart';
 
-/// This is the starting point of the app
+// This is the starting point of the app
 void main() {
   runApp(const MyApp());
 }
 
-/// This is the root widget of the app.
-/// It sets up the language support for British and American English.
+//This is the root widget of the app.
+// It sets up the language support for British and American English.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -64,7 +65,6 @@ class HomePage extends StatelessWidget {
                 height: 60,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Navigate to Pet Owner page
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Button 2 - teammate's Pet page
+              // Button 2 - Abu's Pet page
               SizedBox(
                 width: double.infinity,
                 height: 60,
@@ -105,13 +105,13 @@ class HomePage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Button 3 - teammate's Vaccine page
+              // Button 3 - Aladin's Vaccine page (coming soon)
               SizedBox(
                 width: double.infinity,
                 height: 60,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Teammate 3 will add navigation here
+                    // Aladin will add navigation here
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
@@ -123,13 +123,18 @@ class HomePage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Button 4 - teammate's Veterinarian page
+              // Button 4 - Veterinarian page
               SizedBox(
                 width: double.infinity,
                 height: 60,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Teammate 4 will add navigation here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VeterinarianPage(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.purple,
